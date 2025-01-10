@@ -13,6 +13,20 @@ public class App {
         System.out.println("la suma de 8 + 9 es " + valorSuma);
         comprobarParImpar(7);
         comprobarParImpar(88);
+        String resultado = evaluarNumero(88);
+        String resultado2 = evaluarNumero(-98);
+        System.out.println(resultado);
+        System.out.println(resultado2);
+    }
+
+    public static String evaluarNumero(int numero){
+        if (numero > 0){
+            return "POSITIVO: " + numero;
+        }else if (numero < 0){
+            return "NEGATIVO: " + numero;
+        }else{
+            return "CERO: " + numero;
+        }
     }
 
     public static void comprobarParImpar(int numero){
