@@ -17,6 +17,19 @@ public class App {
         String resultado2 = evaluarNumero(-98);
         System.out.println(resultado);
         System.out.println(resultado2);
+
+        String textoNumero = "12345";
+        //QUEREMOS GUARDAR EN UN NUMERO DICHO TEXTO
+        //PARA CONVERTIR UN TIPO DE DATO String A UN PRIMITIVO
+        // int, double, float...
+        // Se utiliza el nombre de la clase y el método parse necesario
+        // Son métodos static
+        // int: Integer
+        // float: Float
+        // boolean: Boolean
+        int datoNumero = Integer.parseInt(textoNumero);
+        //CONVERTIR EL TEXTO A DECIMAL
+        float miFloat = Float.parseFloat(textoNumero);
     }
 
     public static String evaluarNumero(int numero){
