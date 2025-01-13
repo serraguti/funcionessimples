@@ -17,5 +17,9 @@ public class EjecucionNumeros {
         int menor = EvaluacionNumeros.menorDosNumeros(numero1, numero2);
         System.out.println("Mayor: " + mayor);
         System.out.println("Menor: " + menor);
+        System.out.println("Introduzca número 3");
+        entrada = teclado.nextLine();
+        int numero3 = Integer.parseInt(entrada);
+        EvaluacionNumeros.evaluarTresNumeros(numero1, numero2, numero3);
     }
 }
