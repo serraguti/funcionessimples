@@ -1,4 +1,45 @@
 public class HerramientasPersonas {
+
+    public static String getDiaNacimiento(int dia, int mes, int anyo){
+        //COMPROBAMOS ENERO Y FEBRERO
+        if (mes == 1){
+            mes = 13;
+            anyo--;
+        }else if (mes == 2){
+            mes = 14;
+            anyo--;
+        }
+        //ALMACENAMOS EN VARIABLES DIFERENTES CADA OPERACION MATEMATICA
+        int op1 = ((mes + 1) * 3) / 5;
+        int op2 = anyo / 4;
+        int op3 = anyo / 100;
+        int op4 = anyo / 400;
+        //Sumar el dia, 
+        //el doble del mes, el año, el resultado de la operación 1
+        //, el resultado de la operación 2, 
+        //menos el resultado de la operación 3 más la operación 4 más 2.
+        int op5 = dia + (mes * 2) + anyo + op1 + op2 - op3 + op4 + 2;
+        int op6 = op5 / 7;
+        int resultado = op5 - (op6 * 7);
+        String diaSemana = "";
+        if (resultado == 0){
+            diaSemana = "SABADO";
+        }else if (resultado == 1){
+            diaSemana = "DOMINGO";
+        }else if (resultado == 2){
+            diaSemana = "LUNES";
+        }else if (resultado == 3){
+            diaSemana = "MARTES";
+        }else if (resultado == 4){
+            diaSemana = "MIERCOLES";
+        }else if (resultado == 5){
+            diaSemana = "JUEVES";
+        }else if (resultado == 6){
+            diaSemana = "VIERNES";
+        }
+        return diaSemana;
+    }
+
     public static String getLetraNIF(int numeroDni){
         int resultado = (numeroDni - ((numeroDni / 23) * 23));
         String secuencia = "TRWAGMYFPDXBNJZSQVHLCKET";
